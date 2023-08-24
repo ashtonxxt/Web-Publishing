@@ -1,0 +1,267 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    margin: auto;
+}
+
+/*-----width share----*/
+.headerbox, .text-container, .tctc, .contactcontainer{
+    width: 85%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover {
+    color: grey;
+}
+
+/*-----p colour-------*/
+.text-container, .product-text, .tctc p {
+    color: rgb(103, 103, 103);
+}
+
+/*--------------------Header------------------------*/
+
+nav ul li {
+    list-style-type: none;
+    display: inline;
+    margin-right: 75px;
+}
+
+nav ul li:last-child {
+    margin-right: 0%;
+}
+
+.header-box {
+    overflow: overlay;
+    /*avoid the object go up stick at the top， float 讓box變透明所以東西推上去。overflow的作用就是恢復那個box*/
+    width: 85%;
+    margin: auto;
+    line-height: 70px;
+}
+
+h1#logotext {
+    float: left;
+}
+
+nav {
+    float: right;
+}
+
+.bar{
+    display: block;
+    height: 3px;
+    width: 25px;
+    background-color: rgb(19, 19, 19);
+    margin: 5px auto;
+    border-radius: 30px;
+}
+
+.hamburger{
+    display: none;
+    float: right;
+    margin-top: 20px;
+    cursor: pointer;
+    /*this is when the mouse hover the hamburger will look like afinger pointing*/
+
+}
+/*------herobanner------*/
+
+.hero-banner {
+    z-index: -1;
+    background-image: url(../images/Banner.jpg);
+    background-size: cover;
+    /*cover = div size*/
+    background-position: center;
+    background-repeat: none;
+    height: 100vh;
+    /*vh = based on the screen to set the height*/
+    position: relative;
+}
+
+.hero-content {
+    position: absolute;
+    text-align: left;
+    top: 77%;
+    left: 26%;
+    transform: translate(-26%, -77%);
+    /*must have transorm if got top & left*/
+    color: white;
+}
+
+.hero-content p {
+    margin-bottom: 30px;
+}
+
+.button {
+    width: 100px;
+    margin: auto;
+    padding: 5px 20px;
+    color: white;
+    border: 3px solid white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+}
+
+/*------textcontainer------*/
+
+.text-container {
+    text-align: center;
+    margin: 10vh auto;
+    /*2 value = updown leftright*/
+}
+
+.text-container h1 {
+    margin-bottom: 20px;
+    color: rgb(69, 69, 69);
+}
+
+
+
+/*---productcontainer---*/
+
+.product-image {
+    width: 50%;
+    float: left;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.product-image::-webkit-scrollbar{
+    display: none;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+}
+
+.product-text {
+    width: 50%;
+    float: right;
+}
+
+.product-text p{
+    width: 81%;
+    margin: auto;
+    margin-top: 40vh;
+}
+
+
+/*-----tctc------*/
+.tctc{
+    display: flex;
+    margin-top: 30vh;
+    margin-bottom: 30vh;
+}
+
+.column{
+    margin: 20px;
+    text-align: justify;
+}
+
+/*------contact container--------*/
+
+.map{
+    width: 50%;
+    float: left;
+}
+
+.map iframe{
+    width: 90%;
+}
+
+.contactbox{
+    width: 50%;
+    float: right;
+    margin-bottom: 10vh;
+}
+
+input[type=text],input[type=email],textarea{
+    width: 100%;
+    padding: 12px ;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border: none;
+    background-color: rgb(223, 223, 223);
+}
+
+textarea{
+    height: 170px;
+}
+
+input[type=submit]{
+    padding: 8px 16px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+}
+
+.fullmapcontainer iframe{
+    width: 100%;
+}
+
+
+
+@media(max-width:768px){
+    .tctc{
+        flex-direction: column;
+        /*display column in a single column*/
+    }
+
+
+    .nav-menu{
+        display: none;
+    }
+
+    .nav-menu.active{
+        display: block;
+        padding-top: 30vh;
+        position: fixed;
+        right: 0;
+        height: 100vh;
+        background-color: rgba(248, 248, 248, 0.8);
+        width: 100%;
+        /*if 505, it will look half of the screen*/
+    }
+
+    nav ul li{
+        display: block;
+        /* the thing will list down*/
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    /*the coding below is for the close icon*/
+    .hamburger.active .bar:nth-child(2)/*zhen dui na yi ge child*/{
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /*the .active is for javascript to activate, without this, the close icon wont work*/
+
+
+}

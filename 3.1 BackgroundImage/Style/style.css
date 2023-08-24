@@ -1,0 +1,44 @@
+/*css document*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 70%;
+    margin: auto;
+    background-color: #92d7de ;
+}
+
+p{
+    padding: 2% 0; /*2=x 0=y*/
+}
+header{
+    background-image: url(../Images/cloud.png);
+    height: 80px; /*header & footer 本來是kosong的 所以需要丟height*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#contain{
+    width: 80%;
+    margin: auto;
+}
+
+footer{
+    background-image: url(../Images/town.png);
+    height: 430px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#container{
+    background-image: url(../Images/raindrop.png);
+    background-position: 20%;
+    background-repeat: repeat-y;
+    background-size: 20%;
+}
+

@@ -1,0 +1,31 @@
+/*css document*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 70%;
+    margin: auto;
+    background-image: url("../Images/red_background.jpg");
+}
+
+header img{
+    width: 100%;
+    height: auto;
+
+}
+
+#container{
+    background-color: yellow;
+    padding: 1px;
+}
+
+.content-text, footer{
+    padding: 1%;
+}
+
+footer{
+    background-color: yellow;
+}

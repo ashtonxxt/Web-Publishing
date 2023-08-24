@@ -1,0 +1,117 @@
+@import url(../webfonts/font1/stylesheet.css);
+
+*{
+    margin: 0%;
+    padding: 0;
+}
+
+body{
+    margin: auto;/*左右旁邊兩側*/
+    background-color: black;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1,h3{
+    font-family: 'britannic_boldregular';
+}
+
+p{
+    opacity: 85%;
+}
+
+header{
+    height: 75px;
+    width: 71%;
+    margin: auto;
+    line-height: 75px;
+}
+
+header h1{
+    float: left;
+}
+
+header nav{ /*the nav inside the header*/
+    text-transform: uppercase;
+    float: right;
+}
+
+nav ul li{
+    list-style-type: none;/*拿掉dot dot*/
+    display: inline; /*並排一條線*/
+    margin-right: 100px;
+    font-weight: bold;
+}
+
+nav ul li:last-child{/*針對nav ul li裏的最後一個東西 = contact*/
+    margin-right: 0;
+}
+
+nav ul li, .button{
+    opacity: 100%;
+    transition: 0.5s ease-in-out;
+}
+
+
+nav ul li:hover, .button:hover{
+    color: grey;
+    opacity: 30%;
+    transition: 0.5s ease-in-out;
+}
+
+#banner img{
+    width: 100%;
+    height: auto;
+}
+
+#content-text{
+    margin: 5%;
+    text-align: center;
+}
+
+#content-text h1{
+    font-size:60px;
+}
+
+#content-text h3{
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+#content-text a p{
+    width: 80px;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 32px;
+    margin-top: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+#content{
+    overflow: overlay;
+}
+
+#content img{
+    width: 25%;/*100% 除 4 因為一排要四個*/
+    height: auto;
+    float: left;
+    transition: 0.5s ease-in-out;
+}
+
+#content img:hover{
+    filter: grayscale(100%);
+    transition: 0.5s ease-in-out;
+}
+
+footer{
+    text-align: center;
+    margin: 2%;
+}
